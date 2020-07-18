@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Author: Vilina Ong-->
+<!--Author: Michael Wang-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="931.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchController">
+   <children>
+      <Label layoutX="415.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Photos">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="42.0" layoutY="454.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#back" prefHeight="39.0" prefWidth="80.0" text="Back">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="628.0" layoutY="454.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#makealbum" prefHeight="39.0" prefWidth="136.0" text="Make Album">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="54.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Tag 1 type: *">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="221.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Tag 1 value: *">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="516.0" layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Tag 2 type:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="683.0" layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Tag 2 value:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="162.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Start Date: *">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="startdate" layoutX="53.0" layoutY="189.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="317.0" promptText="EEE MMM dd HH:mm:ss z yyyy" />
+      <Label layoutX="416.0" layoutY="162.0" text="End Date: *">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="enddate" layoutX="415.0" layoutY="189.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="317.0" promptText="example: MON Oct 24 10:42:37 EST 2020" />
+      <Button layoutX="757.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#search" prefHeight="39.0" prefWidth="124.0" text="Search">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="type1" layoutX="54.0" layoutY="99.0" />
+      <TextField fx:id="value1" layoutX="221.0" layoutY="99.0" />
+      <TextField fx:id="type2" layoutX="516.0" layoutY="99.0" />
+      <TextField fx:id="value2" layoutX="683.0" layoutY="99.0" />
+      <TextField fx:id="conjunction" layoutX="398.0" layoutY="99.0" prefHeight="25.0" prefWidth="94.0" promptText="AND, OR, or leave empty">
+         <font>
+            <Font size="7.0" />
+         </font>
+      </TextField>
+      <ScrollPane fx:id="scroll" layoutX="54.0" layoutY="234.0" prefHeight="200.0" prefWidth="826.0">
+         <content>
+            <TilePane fx:id="tile" prefHeight="200.0" prefWidth="809.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="53.0" layoutY="136.0" prefHeight="17.0" prefWidth="819.0" text="* Indicates mandatory. You can only perform Tag Search or Date Search separately. Leave Tag 1 type field blank in order to perform Date search." />
+      <TextField fx:id="albumname" layoutX="467.0" layoutY="461.0" promptText="New Album Name" />
+   </children>
+</Pane>
